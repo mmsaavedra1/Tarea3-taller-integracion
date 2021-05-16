@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import 'leaflet/dist/leaflet.css';
-import {Icon} from 'leaflet';
+import Icon from 'leaflet';
 import {MapContainer, TileLayer, Marker, Polyline, Popup, CircleMarker} from "react-leaflet";
 import io from 'socket.io-client';
 
@@ -15,8 +15,6 @@ const mark = new Icon({
 iconUrl: "./map.svg",
 iconSize: [30, 30]
 });
-
-
 
 export default function Map({flights}) {   
     

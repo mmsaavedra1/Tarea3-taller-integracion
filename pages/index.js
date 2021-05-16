@@ -4,9 +4,9 @@ import {useState, useEffect} from 'react';
 
 import Navbar from '../components/Navbar';
 import Information from '../components/Information';
-//import Map from '../components/Map';
+import Chat from '../components/Chat';
 const Map = dynamic(() => import("../components/Map"), {
-    loading: () => <p>A map is loading.</p>,
+    loading: () => <p><b>El mapa está cargando...</b></p>,
     ssr: false
    });
 
@@ -32,8 +32,7 @@ export default function Home() {
       setFlights(data); 
       setMapFlights(data); 
     });
-  }, []);
-    
+  }, []);    
     
   return (
     <div>
@@ -46,10 +45,8 @@ export default function Home() {
       <main>
       <div className="grid mx-20 my-10 text-center 	">
         <div className="grid grid-cols-6 gap-4 grid-flow-col		">
-          <Map flights={mapFlights}/>
-          <div className="border-4 border-blue-300 col-end-7 col-span-2 rounded-lg">
-            Chat
-          </div>
+          <Map flights={mapFlights}/>         
+          <Chat/>
       </div>
       <div className="grid mx-20 my-10 text-center 	">
           <div className="grid col-start-1 col-span-5 justify-self-auto ">
