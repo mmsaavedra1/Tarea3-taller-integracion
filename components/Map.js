@@ -1,6 +1,7 @@
-import React, {useState, useEffect} from 'react';
 import 'leaflet/dist/leaflet.css';
-import Icon from 'leaflet';
+
+import React, {useState, useEffect} from 'react';
+import {Icon} from 'leaflet';
 import {MapContainer, TileLayer, Marker, Polyline, Popup, CircleMarker} from "react-leaflet";
 import io from 'socket.io-client';
 
@@ -15,6 +16,7 @@ const mark = new Icon({
 iconUrl: "./map.svg",
 iconSize: [30, 30]
 });
+
 
 export default function Map({flights}) {   
     
@@ -38,7 +40,7 @@ export default function Map({flights}) {
     }, []);
         
     return (
-        <div className=" border-4 border-blue-300 col-start-1 col-end-5 rounded-lg" >      
+        <div className=" border-4 border-blue-300	col-start-1 col-end-5 rounded-lg" >      
             <MapContainer 
                 className="markercluster-map" center={[-33.8, -56.5]} 
                 zoom={4} scrollWheelZoom={false} 

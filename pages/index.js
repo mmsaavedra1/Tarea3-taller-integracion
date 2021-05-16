@@ -1,6 +1,7 @@
 import dynamic from 'next/dynamic'
 import Head from 'next/head';
-import {useState, useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
+
 
 import Navbar from '../components/Navbar';
 import Information from '../components/Information';
@@ -9,7 +10,6 @@ const Map = dynamic(() => import("../components/Map"), {
     loading: () => <p><b>El mapa está cargando...</b></p>,
     ssr: false
    });
-
 
 import io from 'socket.io-client';
 
