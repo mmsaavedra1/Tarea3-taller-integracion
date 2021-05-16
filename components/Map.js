@@ -9,6 +9,12 @@ const icon = new Icon({
     iconUrl: "./airplane.svg",
     iconSize: [35, 35]
   });
+  
+  
+const mark = new Icon({
+iconUrl: "./map.svg",
+iconSize: [30, 30]
+});
 
 
 
@@ -36,8 +42,8 @@ export default function Map({flights}) {
     return (
         <div className=" border-4 border-blue-300	col-start-1 col-end-5 rounded-lg" >      
             <MapContainer 
-                className="markercluster-map" center={[0, 0]} 
-                zoom={1} scrollWheelZoom={false} 
+                className="markercluster-map" center={[-33.8, -56.5]} 
+                zoom={4} scrollWheelZoom={false} 
                 style={{height:400, width: "100%"}}>
                 <TileLayer
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -72,7 +78,7 @@ export default function Map({flights}) {
                         const coor = flight.origin;
                         
                         return (
-                            <Marker position={[flight.origin[0], flight.origin[1]]}>
+                            <Marker position={[flight.origin[0], flight.origin[1]]} icon={mark}>
                                 <Popup>
                                     <span>Coordenadas: {coor}</span>
                                 </Popup>
@@ -86,7 +92,7 @@ export default function Map({flights}) {
                         const coor = flight.destination;
                         
                         return (
-                            <Marker position={coor} >
+                            <Marker position={coor} icon={mark}>
                                 <Popup>
                                     <span>Coordenadas: {coor}</span>
                                 </Popup>

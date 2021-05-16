@@ -44,13 +44,15 @@ export default function Home() {
       </Head>
       <Navbar/>
       <main>
-      <div className="grid mx-20 my-20 text-center 	">
+      <div className="grid mx-20 my-10 text-center 	">
         <div className="grid grid-cols-6 gap-4 grid-flow-col		">
           <Map flights={mapFlights}/>
           <div className="border-4 border-blue-300 col-end-7 col-span-2 rounded-lg">
             Chat
           </div>
-          <div className="grid col-start-1 col-span-5 justify-center ">
+      </div>
+      <div className="grid mx-20 my-10 text-center 	">
+          <div className="grid col-start-1 col-span-5 justify-self-auto ">
             <h1><b>Información de vuelos en curso</b></h1><br/>
             <Information flights={flights} />
           </div>
