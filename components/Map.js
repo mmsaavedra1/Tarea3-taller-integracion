@@ -38,7 +38,7 @@ export default function Map({flights}) {
     }, []);
         
     return (
-        <div className=" border-4 border-blue-300	col-start-1 col-end-5 rounded-lg" >      
+        <div className=" border-4 border-blue-300 col-start-1 col-end-5 rounded-lg" >      
             <MapContainer 
                 className="markercluster-map" center={[-33.8, -56.5]} 
                 zoom={4} scrollWheelZoom={false} 

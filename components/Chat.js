@@ -58,6 +58,7 @@ export default function Chat() {
         setMessage("");
     };  
     
+    
     return (
         <div className="border-4 border-blue-300 col-end-7 col-span-2 rounded-lg">
             {
@@ -77,7 +78,7 @@ export default function Chat() {
             { isLogin &&
                 <div className="mx-5 my-2">
                     <b><h2>Chat room</h2></b>
-                    <div className="mx-5 my-2 border border-blue-200 overflow-auto overscroll-auto object-bottom h-20">
+                    <div id="chatMessages" className="mx-5 my-2 border border-blue-200 scrolling-auto overflow-auto overscroll-auto  h-40">
                         {
                             messages.map( (req, index) => 
                                 <div key={index}>    
